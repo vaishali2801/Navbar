@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <title>navbar bootstrap</title>
+    <style>
+        .checkbox-wrapper-1 *,
+        .checkbox-wrapper-1 ::after,
+        .checkbox-wrapper-1 ::before {
+          box-sizing: border-box;
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted {
+          margin: 0;
+          width: 0;
+          height: 0;
+          display: inline;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted + label:before {
+          content: "";
+          display: inline-block;
+          vertical-align: top;
+          height: 1.15em;
+          width: 1.15em;
+          margin-right: 0.6em;
+          color: rgba(0, 0, 0, 0.275);
+          border: solid 0.06em;
+          box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em inset, 0 0 0 0.07em transparent inset;
+          border-radius: 0.2em;
+          background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="white" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>') no-repeat center, white;
+          background-size: 0;
+          will-change: color, border, background, background-size, box-shadow;
+          transform: translate3d(0, 0, 0);
+          transition: color 0.1s, border 0.1s, background 0.15s, box-shadow 0.1s;
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted:enabled:active + label:before,
+        .checkbox-wrapper-1 [type=checkbox].substituted:enabled + label:active:before {
+          box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset;
+          background-color: #f0f0f0;
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted:checked + label:before {
+          background-color: #3B99FC;
+          background-size: 0.75em;
+          color: rgba(0, 0, 0, 0.075);
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted:checked:enabled:active + label:before,
+        .checkbox-wrapper-1 [type=checkbox].substituted:checked:enabled + label:active:before {
+          background-color: #0a7ffb;
+          color: rgba(0, 0, 0, 0.275);
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted:focus + label:before {
+          box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset, 0 0 0 3.3px rgba(65, 159, 255, 0.55), 0 0 0 5px rgba(65, 159, 255, 0.3);
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted:focus:active + label:before,
+        .checkbox-wrapper-1 [type=checkbox].substituted:focus + label:active:before {
+          box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset, 0 0 0 3.3px rgba(65, 159, 255, 0.55), 0 0 0 5px rgba(65, 159, 255, 0.3);
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted:disabled + label:before {
+          opacity: 0.5;
+        }
+      
+        .checkbox-wrapper-1 [type=checkbox].substituted.dark + label:before {
+          color: rgba(255, 255, 255, 0.275);
+          background-color: #222;
+          background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="rgba(34, 34, 34, 0.999)" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>');
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted.dark:enabled:active + label:before,
+        .checkbox-wrapper-1 [type=checkbox].substituted.dark:enabled + label:active:before {
+          background-color: #444;
+          box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(255, 255, 255, 0.1) inset;
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted.dark:checked + label:before {
+          background-color: #a97035;
+          color: rgba(255, 255, 255, 0.075);
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted.dark:checked:enabled:active + label:before,
+        .checkbox-wrapper-1 [type=checkbox].substituted.dark:checked:enabled + label:active:before {
+          background-color: #c68035;
+          color: rgba(0, 0, 0, 0.275);
+        }
+        .checkbox-wrapper-1 [type=checkbox].substituted + label {
+          -webkit-user-select: none;
+          user-select: none;
+        }
+      </style>
+</head>
+<body>
+ <header class="border">
+    <div class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+               <img src="./img/logo.png" alt="">
+            </div>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#first">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse container" id="first">
+                <ul class="ms-auto navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a href="" class="nav-link  fw-bold">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link  fw-bold">SEVICES</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle fw-bold" data-bs-toggle="dropdown" data-bs-auto-close="outside">PRODUCTS</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="" class="dropdown-item">AIM</a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item">Lenovo</a>
+                            </li>
+                            <li class="dropstart">
+                                <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Dell</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="" class="dropdown-item">cpu</a></li>
+                                    <li><a href="" class="dropdown-item">mouse</a></li>
+                                    <li><a href="" class="dropdown-item">keyboard</a></li>
+                                    <li><a href="" class="dropdown-item">wire</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item">Itel</a>
+                            </li>
+                            <li class="dropend">
+                                <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Hp</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="" class="dropdown-item">item 1</a></li>
+                                    <li><a href="" class="dropdown-item">item 2</a></li>
+                                    <li><a href="" class="dropdown-item">item 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link  fw-bold">WATCHES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link  fw-bold">SALE</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a href="" class="nav-link  fw-bold">BLOG</a>
+                    </li> 
+                   
+                </ul>
+                <div class="box d-flex gap-3 px-1 ">
+                    <h3><i class="ri-search-line"></i></h3>
+                    <h3><i class="ri-shopping-cart-2-line"></i></h3>
+                    <h3><i class="ri-user-line"></i></h3>
+                   <button class="btn border border-dark" data-bs-toggle="modal" data-bs-target="#pop">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ </header>
+
+ <section>
+    <div class="modal fade" id="pop" data-bs-backdrop="static">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Sign In</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>email:</p>
+                    <input type="email" placeholder="Email or Mobile Number" class="my-1"/><br/>
+                    <p>password:</p>
+                    <input type="password" placeholder="Password" class="my-1"/><br/>
+                    <br/>
+                    <p class="display-7">OR</p>
+                    <button class="btn bg-secondary text-white">Use a sign-in code </button>
+                    <p class="display-7">Forget password?</p>
+                    <div class="box">
+                    <div class="checkbox-wrapper-1">
+                    <input id="example-1" class="substituted" type="checkbox" aria-hidden="true" />
+                    <label for="example-1"> <b>Remember Me</b></label>
+                    </div>
+                    <p>New to Netflix?&nbsp;&nbsp;<a href="">Sign up now.</a></p>
+                    <p class="display-7">This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href=""> Learn more.</a><p>
+                    </div> 
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary m-1" data-bs-toggle="modal" data-bs-target="#pop2">Login In </button>
+                    <button class="btn btn-info">Resister now</button>
+                </div>
+            </div>
+         </div> 
+   </div>
+ </section>
+ <section>
+    <div class="modal fade" id="pop2" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Login</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>username:</p>
+                    <input type="text" placeholder="Enter your name">
+                    <p>password:</p>
+                    <input type="password" placeholder="Enter your password" name="" id="">
+                    <p>or</p>
+                </div>
+                <div class="modal-footer">
+                    <button class=" w-100 btn btn-secondary "> <i class="ri-google-fill"></i> &nbsp;Sign-in with google</button>
+                    <button class=" w-100 btn btn-secondary "> <i class="ri-facebook-circle-fill"></i></i> &nbsp;Sign-in with facebook</button>
+                    <button class=" w-100 btn btn-secondary "> <i class="ri-twitter-fill"></i></i> &nbsp;Sign-in with twitter</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+ </section>
+         
+          
+          
+</body>
+</html>
